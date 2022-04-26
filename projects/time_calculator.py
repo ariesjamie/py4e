@@ -19,8 +19,6 @@ def time_calculator(hrs, mins, midday, n_days, days_of_the_week = None):
     elif hrs > 12:
         hrs = hrs - 12
         time_result = str(hrs) + ":" + str(mins) + " PM"
-    print(time_result)
-    print(type(time_result))
 
     #calculate next day or n days later
     if n_days == 0:
@@ -35,9 +33,9 @@ def time_calculator(hrs, mins, midday, n_days, days_of_the_week = None):
         days_of_the_week = days_of_the_week.title()
         index = (dict_days_of_the_week.index(days_of_the_week) + n_days) % 7
         display_days_of_the_week = dict_days_of_the_week[index]
-        result = time_result + "," + " " + display_days_of_the_week + str(display_days_later)
+        result = time_result + "," + " " + display_days_of_the_week + display_days_later
     else:
-        result = time_result + str(display_days_later)
+        result = time_result + display_days_later
     
     return result
 
