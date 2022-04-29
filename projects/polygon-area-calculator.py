@@ -44,9 +44,9 @@ class Rectangle:
 class Square(Rectangle):
     def __init__(self, side):
         Rectangle.__init__(self, side, side)
-        self.side = side
-        self.width = side
-        self.height = side
+#         self.side = side
+#         self.width = side
+#         self.height = side
 
     def __str__(self):
         return f'Square(side={self.width})'
